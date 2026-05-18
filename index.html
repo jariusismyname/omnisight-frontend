@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test Site</title>
+    <!-- 1. Load your SDK -->
+    <script src="tracker.js"></script>
+    
+    <!-- 2. Initialize it -->
+    <script>
+        new window.OmniSight({ projectId: 'test-project-123' });
+    </script>
+</head>
+<body>
+    <h1>Testing OmniSight SDK</h1>
+    <button onclick="triggerError()">Click to trigger an error</button>
+
+    <script>
+        function triggerError() {
+            // This will be caught by our SDK!
+            nonExistentFunction(); 
+        }
+    </script>
+</body>
+</html>
